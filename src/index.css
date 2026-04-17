@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* Fallback simple markdown styles in case prose isn't perfectly handling it */
+.markdown-body {
+  @apply text-gray-800 leading-relaxed;
+}
+.markdown-body h1 {
+  @apply text-2xl font-bold mt-6 mb-4 text-gray-900 border-b pb-2;
+}
+.markdown-body h2 {
+  @apply text-xl font-semibold mt-6 mb-3 text-gray-900;
+}
+.markdown-body h3 {
+  @apply text-lg font-semibold mt-4 mb-2 text-gray-900;
+}
+.markdown-body p {
+  @apply mb-4;
+}
+.markdown-body ul {
+  @apply list-disc pl-6 mb-4 space-y-1;
+}
+.markdown-body ol {
+  @apply list-decimal pl-6 mb-4 space-y-1;
+}
+.markdown-body li > p {
+  @apply mb-0;
+}
+.markdown-body strong {
+  @apply font-semibold text-gray-900;
+}
+.markdown-body blockquote {
+  @apply border-l-4 border-gray-300 pl-4 italic text-gray-700 my-4;
+}
+.markdown-body code {
+  @apply bg-gray-100 px-1 py-0.5 rounded text-sm font-mono text-pink-600;
+}
+.markdown-body pre {
+  @apply bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-4;
+}
+.markdown-body pre code {
+  @apply bg-transparent text-inherit p-0;
+}
